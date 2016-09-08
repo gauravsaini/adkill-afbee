@@ -1,0 +1,32 @@
+{
+    "content_scripts": [{
+        "css": ["content.css"],
+        "js": ["sprint.min.js", "content.js"],
+        "matches": ["*://www.facebook.com/*"],
+        "run_at": "document_start"
+   }],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_security_policy": "default-src 'self'",
+    "description": "Kills things you dont want on facebook just with toggle.",
+    "homepage_url": "https://github.com/gauravsaini/adkill-afbee",
+    "icons": {
+        "256": "icon256.png",
+        "128": "icon128.png",
+        "16": "icon16.png",
+        "48": "icon48.png"
+    },
+    "browser_action": {
+        "default_icon": "icon48.png",
+        "default_popup": "menu.html"
+    },
+    "incognito": "spanning",
+    "name": "AdKill Afbee",
+    "options_page": "options.html",
+    "offline_enabled": true,
+    "permissions": ["tabs", "webNavigation", "*://www.facebook.com/*"],
+    "update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.0.1",
+    "manifest_version": 2
+}
